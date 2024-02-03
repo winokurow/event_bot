@@ -6,6 +6,9 @@
   "functions": [
     {
       "source": "functions",
+      "predeploy": [
+        "npm --prefix functions run build"
+      ],
       "codebase": "default",
       "ignore": [
         "node_modules",

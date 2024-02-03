@@ -1,10 +1,10 @@
-const { Telegraf } = require('telegraf');
-const {Markup} = require('telegraf');
-const functions = require('firebase-functions');
+import {Telegraf, Markup} from 'telegraf';
+// Read ENV variablesS
+import {TelegrafContext} from "./types";
+import {BOT_TOKEN} from "./config";
+import {onRequest} from "firebase-functions/v1/https";
 
-const bot = new Telegraf(functions.config().telegrambot.key);
-
-
+const bot = new Telegraf<TelegrafContext>(BOT_TOKEN);
 
 bot.hears('hi', (ctx) => ctx.reply('Hey there'));
 
@@ -21,7 +21,7 @@ bot.command('test', async (ctx) => await ctx.reply('Command invoked'));
 
 bot.launch();
 
-exports.bot = functions.https.onRequest((req, res) => {
+exports.bot = onRequest((req, res) => {
   console.log('trdz')
   bot.handleUpdate(req.body, res);
 })
