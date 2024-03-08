@@ -1,6 +1,13 @@
 import { Scenes, Context } from 'telegraf';
 
-type ISearchData = {
+type IEventData = {
+  name?: string;
+  startDate?: Date;
+  endDate?: Date;
+  multiday?: boolean;
+  location?: string;
+  file?: string;
+  description?: string;
   chatId?: number;
   area?: string;
   zooplaAreaId?: string;
@@ -10,7 +17,8 @@ type ISearchData = {
 };
 
 interface WizardSession extends Scenes.WizardSessionData {
-  search: ISearchData;
+  add: IEventData;
+  search: IEventData;
 }
 
 //interface SessionData extends Scenes.WizardSession<WizardSession> {
@@ -25,8 +33,5 @@ export interface TelegrafContext extends Context {
 
 export enum GLOBAL_ACTIONS {
   search = 'search',
-  searches = 'searches',
-  share = 'share',
-  remove = 'remove',
-  openSearchResults = 'open_search_results',
+  add = 'add',
 }

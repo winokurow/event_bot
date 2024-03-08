@@ -4,3 +4,21 @@ POST https://api.telegram.org/bot6691548166:AAGEFb4JXLRThIT4AxBYwdheaOzlZvv81ME/
 GET https://api.telegram.org/bot6691548166:AAGEFb4JXLRThIT4AxBYwdheaOzlZvv81ME/getWebhookInfo
 
 ############
+
+# curl -X POST
+#  https://YOUR_REGION-YOUR_PROJECT_ID.cloudfunctions.net/saveDataToFirestore
+#  -H 'Content-Type: application/json'
+#  -d '{
+#    "key1": "value1",
+#    "key2": "value2"
+#}'
+POST https://us-central1-eventsinnurnberg.cloudfunctions.net/saveDataToFirestore
+Content-Type: application/json
+
+{
+  "key1": "value1",
+  "key2": "value2"
+}
+
+###
+

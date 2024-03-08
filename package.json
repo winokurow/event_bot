@@ -3,6 +3,6 @@
   "description": "Cloud Functions for Firebase",
   "type": "module",
   "dependencies": {
-    "functions": "file:",
+    "functions": "file:"
   }
 }
