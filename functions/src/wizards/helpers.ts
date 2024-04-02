@@ -6,7 +6,7 @@ export const cancelSearchReply = async (ctx: TelegrafContext, message: string) =
   return ctx.replyWithMarkdown(
     message,
     Markup.inlineKeyboard([
-      Markup.button.callback('Cancel search', ACTIONS.CANCEL),
+      Markup.button.callback('Cancel', ACTIONS.CANCEL),
     ])
   );
 };

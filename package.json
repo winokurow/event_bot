@@ -3,6 +3,7 @@
   "description": "Cloud Functions for Firebase",
   "type": "module",
   "dependencies": {
+    "firebase-functions": "^4.8.0",
     "functions": "file:"
   }
 }

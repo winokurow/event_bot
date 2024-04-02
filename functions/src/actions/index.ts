@@ -1,15 +1,14 @@
 import { Telegraf } from 'telegraf';
-import actionStart from './start';
 import actionHelp from './help';
 import actionSearch from './search';
 import actionAdd from './add';
 import {GLOBAL_ACTIONS, TelegrafContext} from "../types";
 
 export function initActions(bot: Telegraf<TelegrafContext>) {
-  bot.start(actionStart);
+  //bot.start(actionStart);
   bot.help(actionHelp);
-  bot.settings(async (ctx) => {
-    await ctx.setMyCommands([
+  bot.settings((ctx) => {
+    ctx.setMyCommands([
       {
         command: GLOBAL_ACTIONS.search,
         description: '🔍 Начать новый поиск',

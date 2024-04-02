@@ -13,7 +13,6 @@ bot.command("start", (ctx) => {
       ]),
   );
 });
-bot.launch();
 
 exports.bot = functions.https.onRequest((req, res) => {
   bot.handleUpdate(req.body, res);
