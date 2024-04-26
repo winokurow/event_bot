@@ -1,6 +1,6 @@
 import { Scenes, Context } from 'telegraf';
 
-type IEventData = {
+export type IEventData = {
   name?: string;
   startDate?: Date;
   endDate?: Date;
@@ -20,10 +20,6 @@ interface WizardSession extends Scenes.WizardSessionData {
   add: IEventData;
   search: IEventData;
 }
-
-//interface SessionData extends Scenes.WizardSession<WizardSession> {
-//  activeSearches?: ISearchRecords | null;
-//}
 
 export interface TelegrafContext extends Context {
   //session: SessionData;

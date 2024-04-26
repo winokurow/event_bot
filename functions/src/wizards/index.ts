@@ -3,7 +3,6 @@ import {TelegrafContext} from "../types";
 import {ACTIONS} from "./types";
 import searchWizard from './search';
 import addWizard from './add';
-export { WIZARD_TYPE as SEARCH_WIZARD_TYPE } from './search';
 
 export function initWizards(bot: Telegraf<TelegrafContext>) {
 
